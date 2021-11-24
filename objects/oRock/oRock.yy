@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sRock",
-    "path": "sprites/sRock/sRock.yy",
+    "name": "s2DRock",
+    "path": "sprites/s2DRock/s2DRock.yy",
   },
   "solid": false,
   "visible": true,

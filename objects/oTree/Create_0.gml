@@ -1,2 +1,2 @@
 event_inherited();
-sprite = sTree;
+sprite = sBigTree;

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sSawmill",
-    "path": "sprites/sSawmill/sSawmill.yy",
+    "name": "s2DSawmill",
+    "path": "sprites/s2DSawmill/s2DSawmill.yy",
   },
   "solid": false,
   "visible": true,

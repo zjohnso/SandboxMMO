@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTree",
-    "path": "sprites/sTree/sTree.yy",
+    "name": "s2DTree",
+    "path": "sprites/s2DTree/s2DTree.yy",
   },
   "solid": true,
   "visible": true,
