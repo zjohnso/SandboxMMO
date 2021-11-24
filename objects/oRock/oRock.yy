@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sDoorEnterSouth",
-    "path": "sprites/sDoorEnterSouth/sDoorEnterSouth.yy",
+    "name": "sRock",
+    "path": "sprites/sRock/sRock.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "poDoorEnter",
-    "path": "objects/poDoorEnter/poDoorEnter.yy",
+    "name": "poNodes",
+    "path": "objects/poNodes/poNodes.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -29,11 +29,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "DoorEnterTrigger",
-    "path": "folders/Objects/MetaObjects/DoorEnterTrigger.yy",
+    "name": "Nodes",
+    "path": "folders/Objects/Nodes.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oDoorEnterSouth",
+  "name": "oRock",
   "tags": [],
   "resourceType": "GMObject",
 }

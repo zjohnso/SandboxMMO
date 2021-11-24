@@ -4,3 +4,10 @@ function Log() : Resource() constructor {
 	sprite = sLog;
 	_id = 1;
 }
+
+function Coal() : Resource() constructor {
+	name = "Coal"
+	value = 5;
+	sprite = sCoal;
+	_id = 2;
+}

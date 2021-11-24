@@ -24,7 +24,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "DoorEnterTrigger",
-    "path": "folders/Objects/DoorEnterTrigger.yy",
+    "path": "folders/Objects/MetaObjects/DoorEnterTrigger.yy",
   },
   "resourceVersion": "1.0",
   "name": "poDoorEnter",

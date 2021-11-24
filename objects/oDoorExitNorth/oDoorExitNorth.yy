@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "DoorExitTrigger",
-    "path": "folders/Objects/DoorExitTrigger.yy",
+    "path": "folders/Objects/MetaObjects/DoorExitTrigger.yy",
   },
   "resourceVersion": "1.0",
   "name": "oDoorExitNorth",
