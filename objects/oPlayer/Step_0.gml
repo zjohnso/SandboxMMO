@@ -7,7 +7,7 @@ if (isMoving) {
 if path_position == 1 {
 	isMoving = false;
 	if (destinationInstance != noone) {
-		destinationInstance.playerHarvesting = true;	
+		destinationInstance.playerInteracting = true;	
 	}
 }
 

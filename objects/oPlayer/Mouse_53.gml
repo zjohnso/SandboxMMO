@@ -5,7 +5,7 @@ targetTileY = ScreenYToTile(targetX, targetY);
 
 // cancel any action about to happen
 if (destinationInstance != noone) {
-	destinationInstance.playerHarvesting = false;
+	destinationInstance.playerInteracting = false;
 	destinationInstance = noone;
 }
 

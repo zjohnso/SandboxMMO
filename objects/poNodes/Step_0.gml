@@ -1,4 +1,4 @@
-if (playerHarvesting) {
+if (playerInteracting) {
 	if (framesSinceLastHit > 30) {
 		framesSinceLastHit = 0;
 		oPlayer.logs += yield;
