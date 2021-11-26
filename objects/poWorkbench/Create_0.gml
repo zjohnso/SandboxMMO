@@ -3,5 +3,23 @@
 
 // Inherit the parent event
 event_inherited();
-drawX = ToIsoX(x + 8, y + 8);
-drawY = ToIsoY(x + 8, y + 8, 0);
+switch (image_angle) {
+	case 0:
+		cartX = x + 8;
+		cartY = y + 8;
+		break;
+	case 90:
+		cartX = x + 8;
+		cartY = y + 8 + -16;
+		break;
+	case 180: 
+		cartX = x + 8 + -16;
+		cartY = y + 8 + -16;
+		break;
+	case 270:
+		cartX = x + 8 + -16;
+		cartY = y + 8;
+		break;
+}
+drawX = ToIsoX(cartX, cartY);
+drawY = ToIsoY(cartX, cartY, 0);

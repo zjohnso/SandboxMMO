@@ -47,7 +47,21 @@ for (var i = 0; i< MAP_W; i++) {
 		var inst;
 		inst = instance_position(i * 16 + 8, j * 16 + 8, poObjects);
 		if (inst != noone) {
-			draw_sprite(inst.sprite, 0, inst.drawX, inst.drawY);
+			switch (inst.image_angle) {
+				case 0:
+					draw_sprite(inst.sprite, 0, inst.drawX, inst.drawY);
+					break;
+				case 90:
+					draw_sprite(inst.sprite, 1, inst.drawX, inst.drawY);
+					break;
+				case 180:
+					draw_sprite(inst.sprite, 2, inst.drawX, inst.drawY);
+					break;
+				case 270:
+					draw_sprite(inst.sprite, 3, inst.drawX, inst.drawY);
+					break;
+			}
+			
 		}
 		
 		if (i == playerDrawXTile && j == playerDrawYTile) {
