@@ -14,7 +14,7 @@ for (var i = 0; i< MAP_W; i++) {
 		tileZ = tileData[TILE.Z];
 		
 		if (tileIndex != 0) {
-			draw_sprite(sIsoGrass, tileIndex - 1, roomX, roomY + tileZ);	
+			draw_sprite(sIsoGrass, tileIndex - 1, roomX, roomY - tileZ);	
 		}
 	}
 }
@@ -47,7 +47,8 @@ for (var i = 0; i< MAP_W; i++) {
 		var inst;
 		inst = instance_position(i * 16 + 8, j * 16 + 8, poObjects);
 		if (inst != noone) {
-			switch (inst.image_angle) {
+			if (inst.sprite != noone) {
+				switch (inst.image_angle) {
 				case 0:
 					draw_sprite(inst.sprite, 0, inst.drawX, inst.drawY);
 					break;
@@ -60,8 +61,8 @@ for (var i = 0; i< MAP_W; i++) {
 				case 270:
 					draw_sprite(inst.sprite, 3, inst.drawX, inst.drawY);
 					break;
+				}
 			}
-			
 		}
 		
 		if (i == playerDrawXTile && j == playerDrawYTile) {

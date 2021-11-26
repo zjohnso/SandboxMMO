@@ -11,3 +11,10 @@ function Coal() : Resource() constructor {
 	sprite = sCoal;
 	_id = 2;
 }
+
+function Fish() : Resource() constructor {
+	name = "Fish";
+	value = 3;
+	sprite = sFish;
+	_id = 3;
+}

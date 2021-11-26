@@ -22,6 +22,8 @@ targetY = 100;
 destinationX = 0;
 destinationY = 0;
 
+removedCell = false;
+
 
 y -= 8
 x -= 8

@@ -16,11 +16,18 @@ targetX += 8;
 targetY += 8;
 
 path = path_add();
+
+// check for click on some object to interact with
+var inst;
+inst = instance_position(targetX, targetY, poObjects);
+
+if (inst != noone) {
+	mp_grid_clear_cell(grid, targetTileX, targetTileY);
+	removedCell = true;
+}
+
 if mp_grid_path(grid, path, x, y, targetX, targetY, 0) {
 	
-	// check for click on some object to interact with
-	var inst;
-	inst = instance_position(targetX, targetY, poObjects);
 	// if there is some object, go touch it 
 	if (inst != noone) { 
 		// path to tile closest to object but not the object's tile
@@ -32,4 +39,9 @@ if mp_grid_path(grid, path, x, y, targetX, targetY, 0) {
 	destinationX = ToIsoX(targetX, targetY);
 	destinationY = ToIsoY(targetX, targetY, 0);
     path_start(path, 1, path_action_stop, 1);	
+}
+
+if (removedCell) {
+	mp_grid_add_cell(grid, targetTileX, targetTileY);
+	removedCell = false;
 }
