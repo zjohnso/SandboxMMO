@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","path":"sprites/sFish/sFish.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","path":"sprites/sFish/sFish.yy",},"LayerId":{"name":"577bce63-6919-48a8-9886-26da6a506029","path":"sprites/sFish/sFish.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sFish","path":"sprites/sFish/sFish.yy",},"resourceVersion":"1.0","name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","path":"sprites/sCookedFish/sCookedFish.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","path":"sprites/sCookedFish/sCookedFish.yy",},"LayerId":{"name":"577bce63-6919-48a8-9886-26da6a506029","path":"sprites/sCookedFish/sCookedFish.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCookedFish","path":"sprites/sCookedFish/sCookedFish.yy",},"resourceVersion":"1.0","name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sFish","path":"sprites/sFish/sFish.yy",},
+    "spriteId": {"name":"sCookedFish","path":"sprites/sCookedFish/sCookedFish.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"291dca31-62f1-4001-9f41-9f6be5553103","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","path":"sprites/sFish/sFish.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e22d1629-f702-405a-aa8e-028c7a7889d0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"801b96fb-4b3b-4a60-bbc6-55fd24b1f3cc","path":"sprites/sCookedFish/sCookedFish.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sFish","path":"sprites/sFish/sFish.yy",},
+    "parent": {"name":"sCookedFish","path":"sprites/sCookedFish/sCookedFish.yy",},
     "resourceVersion": "1.3",
-    "name": "sFish",
+    "name": "sCookedFish",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/InventoryIcons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sFish",
+  "name": "sCookedFish",
   "tags": [],
   "resourceType": "GMSprite",
 }

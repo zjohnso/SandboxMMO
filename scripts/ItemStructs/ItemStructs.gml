@@ -18,3 +18,10 @@ function Fish() : Resource() constructor {
 	sprite = sFish;
 	_id = 3;
 }
+
+function CookedFish() : Resource() constructor {
+	name = "CookedFish";
+	value = 5;
+	sprite = sCookedFish;
+	_id = 4;
+}
