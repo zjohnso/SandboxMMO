@@ -2,26 +2,26 @@ function Log() : Resource() constructor {
 	name = "Log";
 	value = 2;
 	sprite = sLog;
-	_id = 1;
+	_id = ITEM_ID.LOG;
 }
 
 function Coal() : Resource() constructor {
 	name = "Coal"
 	value = 5;
 	sprite = sCoal;
-	_id = 2;
+	_id = ITEM_ID.COAL;
 }
 
 function Fish() : Resource() constructor {
 	name = "Fish";
 	value = 3;
 	sprite = sFish;
-	_id = 3;
+	_id = ITEM_ID.FISH;
 }
 
 function CookedFish() : Resource() constructor {
 	name = "CookedFish";
 	value = 5;
 	sprite = sCookedFish;
-	_id = 4;
+	_id = ITEM_ID.COOKED_FISH;
 }

@@ -4,4 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
+framesSinceLastHit = 0;
 sprite = sCampfire;

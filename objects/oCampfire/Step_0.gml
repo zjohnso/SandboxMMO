@@ -1,7 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (playerInteracting && oPlayer.inventory.Contains(Fish._id)) {
-	index = oPlayer.GetIndex(Fish._id);
-	oPlayer.inventory.RemoveItem(index, Fish._id);
-	oPlayer.inventory.addItem(new CookedFish(), 1);
+if (playerInteracting) {
+	if (framesSinceLastHit > 30) {
+		framesSinceLastHit = 0;
+		if (oPlayer.inventory.RemoveItem(ITEM_ID.FISH, 1)) {
+			oPlayer.inventory.AddItem(new CookedFish(), 1);	
+		}
+	}
+	framesSinceLastHit++;
 }

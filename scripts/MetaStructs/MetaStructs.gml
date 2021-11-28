@@ -7,15 +7,6 @@ function Inventory() constructor {
 		items_list[i] = new InventorySlot();	
 	}
 	
-	function Contains(item_id) {
-		for (var i = 0; i< array_length(items_list); i++) {
-			var slot = items_list[i];
-			if (slot.item != noone && slot.item._id == item_id) {
-				return true;
-			}
-		}
-	}
-	
 	function GetIndex(item_id) {
 		for (var i = 0; i< array_length(items_list); i++) {
 			var slot = items_list[i];
@@ -25,8 +16,38 @@ function Inventory() constructor {
 		}
 	}
 	
-	function RemoveItem(index, quantity) {
-		items_list[index].quantity -= quantity;
+	function GetTotalQuantity(itemID) {
+		var quantity = 0;
+		for (var i = 0; i < array_length(items_list); i++) {
+			var slot = items_list[i];
+			if (slot.item != noone && slot.item._id == itemID) {
+				quantity += slot.quantity;
+			}
+		}
+		return quantity;
+	}
+	
+	function RemoveItem(itemID, quantity) {
+		if (GetTotalQuantity(itemID) < quantity) {
+			return false;
+		}
+		for (var i = 0; i < array_length(items_list); i++) {
+			var slot = items_list[i];
+			if (slot.item != noone && slot.item._id == itemID) {
+				if (slot.quantity <= quantity) {
+					quantity -= slot.quantity;
+					slot.quantity = 0;
+					slot.item = noone;
+				} else {
+					slot.quantity -= quantity;
+					quantity = 0;
+				}
+				if (quantity == 0) {
+					return true;	
+				}
+			}
+		}
+		show_debug_message("Something went very wrong with removing items.");	
 	}
 	
 	function AddItem(item, quantity) {
