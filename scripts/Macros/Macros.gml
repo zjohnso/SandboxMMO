@@ -14,10 +14,3 @@ enum INV_SLOT {
 	ITEM = 0,
 	AMOUNT = 1
 }
-
-enum ITEM_ID {
-	LOG,
-	COAL,
-	FISH,
-	COOKED_FISH
-}

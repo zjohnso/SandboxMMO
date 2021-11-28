@@ -5,7 +5,7 @@ function Inventory() constructor {
 	items_list = array_create(slots, noone);
 	for (var i = 0; i < slots; i++) {
 		items_list[i] = new InventorySlot();	
-	}
+	} 
 	
 	function GetIndex(item_id) {
 		for (var i = 0; i< array_length(items_list); i++) {

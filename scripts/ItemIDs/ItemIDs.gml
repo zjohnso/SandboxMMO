@@ -1,0 +1,6 @@
+enum ITEM_ID {
+	LOG,
+	COAL,
+	FISH,
+	COOKED_FISH
+}

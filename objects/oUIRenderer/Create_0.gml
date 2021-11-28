@@ -16,3 +16,7 @@ inventoryColumns = 10;
 inventoryWidth = inventoryColumns * slotSize * baseScale + (inventoryColumns + 1)*margin;
 inventoryHeight = inventoryRows * slotSize * baseScale + (inventoryRows + 1)*margin;
 
+
+
+
+hoveringSlot = noone;

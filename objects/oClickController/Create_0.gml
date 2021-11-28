@@ -1,0 +1,6 @@
+enum MOUSE_STATE {
+	IN_UI,
+	IN_WORLD
+}
+
+mouseState = MOUSE_STATE.IN_WORLD;
