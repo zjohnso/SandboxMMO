@@ -15,9 +15,29 @@ for (var i = 0; i < inventoryRows; i++) {
 			quantity = slot.quantity;
 			_xx = _x + iconAdjust * baseScale;
 			_yy = _y + iconAdjust * baseScale;
+			var _alpha = 1;
+			if (inventorySlot == draggingSlot) {
+				_alpha = .5;	
+			}
+			draw_set_alpha(_alpha)
 			draw_sprite_stretched(sprite, 0, _xx, _yy, 16*baseScale, 16*baseScale);
 			draw_text(_xx, _yy, quantity);
+			draw_set_alpha(1);
 		}
 	}
 }
+
+if (draggingSlot != noone) {
+	var guiX = device_mouse_x_to_gui(0);
+	var guiY = device_mouse_y_to_gui(0);
+	
+	var drawX = guiX - (16*baseScale)/2;
+	var drawY = guiY - (16*baseScale)/2;
+	
+	var slot = inventory.items_list[draggingSlot];
+	
+	draw_sprite_stretched(slot.item.sprite, 0, drawX, drawY, 16*baseScale, 16*baseScale);
+	draw_text(drawX, drawY, slot.quantity);
+}
+
 

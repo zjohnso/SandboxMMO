@@ -20,3 +20,4 @@ inventoryHeight = inventoryRows * slotSize * baseScale + (inventoryRows + 1)*mar
 
 
 hoveringSlot = noone;
+draggingSlot = noone;

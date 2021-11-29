@@ -7,6 +7,12 @@ function Inventory() constructor {
 		items_list[i] = new InventorySlot();	
 	} 
 	
+	function SwapSlots(swapFromSlot, swapToSlot) {
+		var temp = items_list[swapFromSlot];
+		items_list[swapFromSlot] = items_list[swapToSlot];
+		items_list[swapToSlot] = temp;
+	}
+	
 	function GetIndex(item_id) {
 		for (var i = 0; i< array_length(items_list); i++) {
 			var slot = items_list[i];
