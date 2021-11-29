@@ -37,12 +37,12 @@ function CheckCraftingInterface(currentInstance) {
 		botX = inventoryPosX + inventoryWidth;
 		botY = inventoryPosY + inventoryHeight;
 		
-		if (point_in_rectangle(guiX, guiY, topX, topY, botX, botY)) {
+		if (point_in_rectangle(mouse_x, mouse_y, topX, topY, botX, botY)) {
 			for (var i = 0; i < inventoryRows; i++) {
 				for (var j = 0; j < inventoryColumns; j++) {
 					var _y = inventoryPosY + (i + 1) * margin + i*slotSize*baseScale;
 					var _x = inventoryPosX + (j + 1) * margin + j*slotSize*baseScale;
-					if (point_in_rectangle(guiX, guiY, _x, _y, _x + slotSize*baseScale, _y + slotSize*baseScale)) {
+					if (point_in_rectangle(mouse_x, mouse_y, _x, _y, _x + slotSize*baseScale, _y + slotSize*baseScale)) {
 						hoveringSlot = 10*i + j;
 						return true;
 					}

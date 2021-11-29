@@ -1,3 +1,0 @@
-if (playerInteracting) {
-	DrawCraftingInterface(self);
-}
