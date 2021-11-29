@@ -49,3 +49,32 @@ function HandlePlayerMovement(){
 		}
 	}
 }
+
+function CraftItem(recipe) {
+	var input = recipe.input;
+	var output = recipe.output;
+	
+	// check player has necessary items
+	for (var i = 0; i < array_length(input); i++) {
+		var itemID = input[i].item._id;
+		var quantity = input[i].quantity;
+		if (oPlayer.inventory.GetTotalQuantity(itemID) < quantity) {
+			return false;	
+		}
+	}
+	
+	// remove input items
+	for (var i = 0; i < array_length(input); i++) {
+		var itemID = input[i].item._id;
+		var quantity = input[i].quantity;
+		oPlayer.inventory.RemoveItem(itemID, quantity)
+	}
+	
+	// add output items
+	for (var i = 0; i < array_length(output); i++) {
+		var item = output[i].item;
+		var quantity = output[i].quantity;
+		oPlayer.inventory.AddItem(item, quantity)
+	}
+	return true;
+}

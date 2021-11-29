@@ -7,7 +7,7 @@
     {"id":{"name":"sCookedFish","path":"sprites/sCookedFish/sCookedFish.yy",},"order":3,},
     {"id":{"name":"oDoorEnterWest","path":"objects/oDoorEnterWest/oDoorEnterWest.yy",},"order":3,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
-    {"id":{"name":"HandlePlayerMovement","path":"scripts/HandlePlayerMovement/HandlePlayerMovement.yy",},"order":10,},
+    {"id":{"name":"ActionFunctions","path":"scripts/ActionFunctions/ActionFunctions.yy",},"order":10,},
     {"id":{"name":"s2DSawmill","path":"sprites/s2DSawmill/s2DSawmill.yy",},"order":0,},
     {"id":{"name":"poDoorEnter","path":"objects/poDoorEnter/poDoorEnter.yy",},"order":4,},
     {"id":{"name":"sDoorExitSouth","path":"sprites/sDoorExitSouth/sDoorExitSouth.yy",},"order":4,},

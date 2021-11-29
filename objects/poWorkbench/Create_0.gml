@@ -1,8 +1,5 @@
-/// @description Insert description here
-// You can write your code in this editor
-
-// Inherit the parent event
 event_inherited();
+
 switch (image_angle) {
 	case 0:
 		cartX = x + 8;
@@ -21,5 +18,33 @@ switch (image_angle) {
 		cartY = y + 8;
 		break;
 }
+
 drawX = ToIsoX(cartX, cartY);
 drawY = ToIsoY(cartX, cartY, 0);
+
+
+recipes = noone;
+
+
+// UI Declarations
+xMidpoint = camera_get_view_width(view_camera[0])/2;
+yMidpoint = camera_get_view_height(view_camera[0])/2;
+baseScale = 2;
+iconScale = 1.5;
+margin = 2;
+slotSize = 20;
+iconSize = 16;
+
+iconAdjust = 2;
+
+inventory = oPlayer.inventory;
+inventoryPosX = 10;
+inventoryPosY = 300;
+inventoryRows = 1;
+inventoryColumns = 1;
+inventoryWidth = inventoryColumns * slotSize * baseScale + (inventoryColumns + 1)*margin;
+inventoryHeight = inventoryRows * slotSize * baseScale + (inventoryRows + 1)*margin;
+
+
+// UI Dynamic Declarations
+hoveringSlot = noone;

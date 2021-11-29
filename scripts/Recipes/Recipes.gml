@@ -1,6 +1,6 @@
-function RecipeSlot(item, quantity) constructor {
-	_item = item;
-	_quantity = quantity;
+function RecipeSlot(_item, _quantity) constructor {
+	item = _item;
+	quantity = _quantity;
 }
 
 function Recipe_CookedFish() constructor {

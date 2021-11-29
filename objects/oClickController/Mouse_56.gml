@@ -1,7 +1,7 @@
 switch mouseState {
-	case MOUSE_STATE.IN_UI:
+	case MOUSE_STATE.IN_INVENTORY:
 		with(oUIRenderer) {
-			if (hoveringSlot != noone) {
+			if (hoveringSlot != noone && draggingSlot != noone) {
 				inventory.SwapSlots(draggingSlot, hoveringSlot); 
 			}
 			draggingSlot = noone;
