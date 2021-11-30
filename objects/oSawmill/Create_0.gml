@@ -5,3 +5,4 @@
 event_inherited();
 
 sprite = sSawmill;
+recipes = [new Recipe_Plank()];

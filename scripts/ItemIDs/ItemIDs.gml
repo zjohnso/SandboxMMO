@@ -2,5 +2,6 @@ enum ITEM_ID {
 	LOG,
 	COAL,
 	FISH,
-	COOKED_FISH
+	COOKED_FISH,
+	PLANK
 }

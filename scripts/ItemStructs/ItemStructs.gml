@@ -25,3 +25,10 @@ function CookedFish() : Resource() constructor {
 	sprite = sCookedFish;
 	_id = ITEM_ID.COOKED_FISH;
 }
+
+function Plank() : Resource() constructor {
+	name = "Plank";
+	value = 5;
+	sprite = sPlank;
+	_id = ITEM_ID.PLANK;
+}

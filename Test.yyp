@@ -21,6 +21,7 @@
     {"id":{"name":"oDoorEnterSouth","path":"objects/oDoorEnterSouth/oDoorEnterSouth.yy",},"order":1,},
     {"id":{"name":"oDoorExitWest","path":"objects/oDoorExitWest/oDoorExitWest.yy",},"order":3,},
     {"id":{"name":"oClickController","path":"objects/oClickController/oClickController.yy",},"order":6,},
+    {"id":{"name":"sPlank","path":"sprites/sPlank/sPlank.yy",},"order":4,},
     {"id":{"name":"ItemStructs","path":"scripts/ItemStructs/ItemStructs.yy",},"order":5,},
     {"id":{"name":"IsoFunctions","path":"scripts/IsoFunctions/IsoFunctions.yy",},"order":3,},
     {"id":{"name":"sCampfire","path":"sprites/sCampfire/sCampfire.yy",},"order":4,},
