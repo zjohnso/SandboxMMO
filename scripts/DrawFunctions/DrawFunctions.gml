@@ -1,10 +1,13 @@
 function DrawCraftingInterface(currentWorkbench){
 	with(currentWorkbench) {
-		draw_sprite_stretched_ext(sGreyFrame, 0, inventoryPosX, inventoryPosY, inventoryWidth, inventoryHeight, c_white, .75);
+		var scaleFactor = oCameraControl.zoom / oCameraControl.camZoomScale;
+		posX = (inventoryPosX - camera_get_view_x(view_camera[0])) * scaleFactor;
+		posY = (inventoryPosY - camera_get_view_y(view_camera[0])) * scaleFactor;
+		draw_sprite_stretched_ext(sGreyFrame, 0, posX, posY, inventoryWidth, inventoryHeight, c_white, .75);
 		for (var i = 0; i < inventoryRows; i++) {
 			for (var j = 0; j < inventoryColumns; j++) {
-				_y = inventoryPosY + (i + 1) * margin + i*slotSize*baseScale;
-				_x = inventoryPosX + (j + 1) * margin + j*slotSize*baseScale;
+				_y = posY + (i + 1) * margin + i*slotSize*baseScale;
+				_x = posX + (j + 1) * margin + j*slotSize*baseScale;
 				inventorySlot = 10*i + j;
 				var frameSpriteIndex = 0;
 				if (inventorySlot == hoveringSlot) {

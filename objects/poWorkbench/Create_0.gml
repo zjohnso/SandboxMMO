@@ -29,9 +29,9 @@ recipes = noone;
 // UI Declarations
 xMidpoint = camera_get_view_width(view_camera[0])/2;
 yMidpoint = camera_get_view_height(view_camera[0])/2;
-baseScale = 1;
+baseScale = 2;
 iconScale = 1.5;
-margin = 0;
+margin = 2;
 slotSize = 20;
 iconSize = 16;
 
@@ -39,7 +39,9 @@ iconAdjust = 2;
 
 inventory = oPlayer.inventory;
 inventoryPosX = drawX + 16;
-inventoryPosY = drawY;
+inventoryPosY = drawY - 16;
+posX = inventoryPosX;
+posY = inventoryPosY;
 inventoryRows = 1;
 inventoryColumns = 1;
 inventoryWidth = inventoryColumns * slotSize * baseScale + (inventoryColumns + 1)*margin;
