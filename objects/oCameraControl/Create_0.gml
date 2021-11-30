@@ -1,3 +1,6 @@
+#macro MAX_ZOOM 4
+#macro MIN_ZOOM .25
+
 zoom = 4;
 idealW = display_get_width()/zoom;
 idealH = display_get_height()/zoom;

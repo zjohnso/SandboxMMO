@@ -10,11 +10,6 @@ camH *= camZoomScale;
 var xOffset = camW/2;
 var yOffset = camH/2;
 
-show_debug_message("cam Pos: " + string(x - xOffset) + ", " + string(y - yOffset));
-show_debug_message("cam Dims: " + string(camW) + ", " + string(camH));
-show_debug_message("cam aspect: " + string(camW/camH));
-show_debug_message("window aspect: " + string(window_get_width()/window_get_height()));
-
 camera_set_view_size(view_camera[0], camW, camH);
 surface_resize(application_surface, window_get_width(), window_get_height());
 
