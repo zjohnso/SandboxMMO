@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "UI",
+    "path": "folders/Scripts/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "DrawFunctions",
+  "name": "MenuBarUI",
   "tags": [],
   "resourceType": "GMScript",
 }

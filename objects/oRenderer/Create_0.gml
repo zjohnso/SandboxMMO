@@ -1,6 +1,7 @@
 layer_set_visible("GroundTiles", false);
 layer_set_visible("WallTiles", false);
 layer_set_visible("RoofTiles", false);
+draw_set_font(GameFont);
 global.theMap = ds_grid_create(MAP_W, MAP_H);
 global.theTopMap = ds_grid_create(MAP_W, MAP_H);
 global.theRoofMap = ds_grid_create(MAP_W, MAP_H);

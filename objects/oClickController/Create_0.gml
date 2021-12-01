@@ -1,8 +1,8 @@
 enum MOUSE_STATE {
-	IN_INVENTORY,
 	IN_WORLD,
-	IN_CRAFTING
+	IN_INV,
+	IN_CRAFT,
+	IN_MENU_BAR,
 }
-
+globalvar mouseState;
 mouseState = MOUSE_STATE.IN_WORLD;
-destinationInstance = noone;

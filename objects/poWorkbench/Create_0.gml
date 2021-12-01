@@ -1,4 +1,5 @@
 event_inherited();
+inside = false;
 
 switch (image_angle) {
 	case 0:
@@ -22,30 +23,23 @@ switch (image_angle) {
 drawX = ToIsoX(cartX, cartY);
 drawY = ToIsoY(cartX, cartY, 0);
 
-
 recipes = noone;
 
-
 // UI Declarations
-xMidpoint = camera_get_view_width(view_camera[0])/2;
-yMidpoint = camera_get_view_height(view_camera[0])/2;
 baseScale = 2;
-iconScale = 1.5;
 margin = 2;
 slotSize = 20;
 iconSize = 16;
 
 iconAdjust = 2;
-
-inventory = oPlayer.inventory;
-inventoryPosX = drawX + 16;
-inventoryPosY = drawY - 16;
-posX = inventoryPosX;
-posY = inventoryPosY;
-inventoryRows = 1;
-inventoryColumns = 1;
-inventoryWidth = inventoryColumns * slotSize * baseScale + (inventoryColumns + 1)*margin;
-inventoryHeight = inventoryRows * slotSize * baseScale + (inventoryRows + 1)*margin;
+windowPosX = drawX + 16;
+windowPosY = drawY - 16;
+windowDrawPosX = windowPosX;
+windowDrawPosY = windowPosY;
+recipeRows = 1;
+recipeColumns = 1;
+windowWidth = recipeColumns * slotSize * baseScale + (recipeColumns + 1)*margin;
+windowHeight = recipeRows * slotSize * baseScale + (recipeRows + 1)*margin;
 
 
 // UI Dynamic Declarations
