@@ -36,8 +36,8 @@ for (var i = 0; i< MAP_W; i++) {
 		
 		if (tileIndex != 0) {
 			var a = 1;
-			if (i >= playerDrawXTile && i < playerDrawXTile + 3) {
-				if (j >= playerDrawYTile && j < playerDrawYTile + 3) {
+			if (i >= playerDrawXTile && i < playerDrawXTile + 2) {
+				if (j >= playerDrawYTile && j < playerDrawYTile + 2) {
 					a = .25;	
 				}
 			}
