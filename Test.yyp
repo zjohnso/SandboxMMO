@@ -26,6 +26,7 @@
     {"id":{"name":"IsoFunctions","path":"scripts/IsoFunctions/IsoFunctions.yy",},"order":0,},
     {"id":{"name":"sCampfire","path":"sprites/sCampfire/sCampfire.yy",},"order":4,},
     {"id":{"name":"sDoorExitWest","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},"order":8,},
+    {"id":{"name":"oRenderer2","path":"objects/oRenderer2/oRenderer2.yy",},"order":8,},
     {"id":{"name":"oTree","path":"objects/oTree/oTree.yy",},"order":1,},
     {"id":{"name":"sDoorExitNorth","path":"sprites/sDoorExitNorth/sDoorExitNorth.yy",},"order":1,},
     {"id":{"name":"oRenderer","path":"objects/oRenderer/oRenderer.yy",},"order":1,},
@@ -44,6 +45,7 @@
     {"id":{"name":"poWorkbench","path":"objects/poWorkbench/poWorkbench.yy",},"order":0,},
     {"id":{"name":"s2DRoofTS","path":"sprites/s2DRoofTS/s2DRoofTS.yy",},"order":2,},
     {"id":{"name":"sCoal","path":"sprites/sCoal/sCoal.yy",},"order":1,},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},"order":1,},
     {"id":{"name":"sDoorExitEast","path":"sprites/sDoorExitEast/sDoorExitEast.yy",},"order":6,},
     {"id":{"name":"sSawmill","path":"sprites/sSawmill/sSawmill.yy",},"order":0,},
     {"id":{"name":"sBigTree","path":"sprites/sBigTree/sBigTree.yy",},"order":0,},
@@ -86,6 +88,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "Folders": [
@@ -131,7 +134,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2.3.7.603",
   },
   "resourceVersion": "1.4",
   "name": "Test",
