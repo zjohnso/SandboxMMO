@@ -9,7 +9,7 @@ global.theRoofMap = ds_grid_create(MAP_W, MAP_H);
 global.drawRoof = true;
 
 globalvar grid;
-grid = mp_grid_create(0,0,room_width div 16, room_height div 16, 16, 16);
+grid = mp_grid_create(0,0,room_width div 4, room_height div 4, 4, 4);
 
 var tileMap = layer_tilemap_get_id("GroundTiles");
 for (var i = 0; i < MAP_W; i++) {
@@ -45,8 +45,8 @@ for (var i = 0; i < MAP_W; i++) {
 	}
 }
 tileMap = layer_tilemap_get_id("ColliderTiles");
-for (var i = 0; i < MAP_W; i++) {
-	for (var j = 0; j < MAP_H; j++) {
+for (var i = 0; i < MAP_W * 4; i++) {
+	for (var j = 0; j < MAP_H * 4; j++) {
 		var tileMapData = tilemap_get(tileMap, i, j);
 		if (tileMapData == 1) {
 			mp_grid_add_cell(grid, i, j);	

@@ -18,6 +18,7 @@ function HandlePlayerMovement(){
 		targetY += 8;
 
 		path = path_add();
+		newPath = path_add();
 
 		// check for click on some object to interact with
 		var inst;
@@ -36,11 +37,28 @@ function HandlePlayerMovement(){
 				path_delete_point(path, path_get_number(path) - 1);
 				destinationInstance = inst;
 			}
+			
+			// generate a path that will honor grid based movement
+			var lastPointX = -1;
+			var lastPointY = -1;
+			for (var i = 0; i < path_get_number(path); i++) {
+				var pointX = path_get_point_x(path, i);
+				var pointY = path_get_point_y(path, i);
+				var pointTileX = floor(pointX div TILE_H);
+				var pointTileY = floor(pointY div TILE_H);
+				if (pointTileX != lastPointX || pointTileY != lastPointY) {
+					path_add_point(newPath, pointTileX * TILE_H + TILE_H/2, pointTileY * TILE_H + TILE_H/2, 100);
+					lastPointX = pointTileX;
+					lastPointY = pointTileY;
+				}
+			}
+			// set the path to not return to start
+			path_set_closed(newPath, false);
 	
 			isMoving = true;
 			destinationX = ToIsoX(targetX, targetY);
 			destinationY = ToIsoY(targetX, targetY, 0);
-		    path_start(path, 1, path_action_stop, 1);	
+		    path_start(newPath, 1, path_action_stop, true);	
 		}
 
 		if (removedCell) {
