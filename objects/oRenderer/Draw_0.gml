@@ -25,6 +25,22 @@ for (var i = 0; i< MAP_W; i++) {
 }
 
 for (var i = 0; i< MAP_W; i++) {
+	for (var j = 0; j < MAP_H; j++) {
+		tileData = global.theFloorMap[# i, j];
+		
+		roomX = TileToScreenX(i, j);
+		roomY = TileToScreenY(i, j);
+		
+		tileIndex = tileData[TILE.SPRITE];
+		tileZ = tileData[TILE.Z];
+		
+		if (tileIndex != 0) {
+			draw_sprite(sIsoInteriorFloors, tileIndex - 1, roomX, roomY - tileZ);
+		}
+	}
+}
+
+for (var i = 0; i< MAP_W; i++) {
 	for (var j = 0; j <MAP_H; j++) {
 		tileData = global.theTopMap[# i, j];
 		roomX = TileToScreenX(i, j);

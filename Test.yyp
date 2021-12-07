@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"s2DCampfire","path":"sprites/s2DCampfire/s2DCampfire.yy",},"order":3,},
     {"id":{"name":"oDoorEnterEast","path":"objects/oDoorEnterEast/oDoorEnterEast.yy",},"order":2,},
+    {"id":{"name":"ts2DInteriorFloor","path":"tilesets/ts2DInteriorFloor/ts2DInteriorFloor.yy",},"order":5,},
     {"id":{"name":"oDoorExitNorth","path":"objects/oDoorExitNorth/oDoorExitNorth.yy",},"order":0,},
     {"id":{"name":"sCookedFish","path":"sprites/sCookedFish/sCookedFish.yy",},"order":3,},
     {"id":{"name":"oDoorEnterWest","path":"objects/oDoorEnterWest/oDoorEnterWest.yy",},"order":3,},
@@ -16,6 +17,7 @@
     {"id":{"name":"s2DFishingNode","path":"sprites/s2DFishingNode/s2DFishingNode.yy",},"order":2,},
     {"id":{"name":"sIsoGrass","path":"sprites/sIsoGrass/sIsoGrass.yy",},"order":3,},
     {"id":{"name":"sIsoRoof","path":"sprites/sIsoRoof/sIsoRoof.yy",},"order":0,},
+    {"id":{"name":"sIsoInteriorFloors","path":"sprites/sIsoInteriorFloors/sIsoInteriorFloors.yy",},"order":4,},
     {"id":{"name":"poObjects","path":"objects/poObjects/poObjects.yy",},"order":6,},
     {"id":{"name":"sDestination","path":"sprites/sDestination/sDestination.yy",},"order":1,},
     {"id":{"name":"sColliderLevel2","path":"sprites/sColliderLevel2/sColliderLevel2.yy",},"order":9,},
@@ -72,6 +74,7 @@
     {"id":{"name":"GameFont","path":"fonts/GameFont/GameFont.yy",},"order":0,},
     {"id":{"name":"oRock","path":"objects/oRock/oRock.yy",},"order":3,},
     {"id":{"name":"ts2DWalls","path":"tilesets/ts2DWalls/ts2DWalls.yy",},"order":2,},
+    {"id":{"name":"s2DInteriorFloorTS","path":"sprites/s2DInteriorFloorTS/s2DInteriorFloorTS.yy",},"order":4,},
     {"id":{"name":"sChest","path":"sprites/sChest/sChest.yy",},"order":0,},
     {"id":{"name":"sDoorEnterSouth","path":"sprites/sDoorEnterSouth/sDoorEnterSouth.yy",},"order":3,},
     {"id":{"name":"poNodes","path":"objects/poNodes/poNodes.yy",},"order":2,},

@@ -1,9 +1,11 @@
 layer_set_visible("GroundTiles", false);
 layer_set_visible("WallTiles", false);
+layer_set_visible("FloorTiles", false);
 layer_set_visible("RoofTiles", false);
 layer_set_visible("ColliderTiles", false);
 draw_set_font(GameFont);
 global.theMap = ds_grid_create(MAP_W, MAP_H);
+global.theFloorMap = ds_grid_create(MAP_W, MAP_H);
 global.theTopMap = ds_grid_create(MAP_W, MAP_H);
 global.theRoofMap = ds_grid_create(MAP_W, MAP_H);
 global.drawRoof = true;
@@ -23,6 +25,17 @@ for (var i = 0; i < MAP_W; i++) {
 		thisTile[TILE.SPRITE] = tileMapData;
 		thisTile[TILE.Z] = 0;
 		global.theMap[# i, j] = thisTile;
+	}
+}
+var tileMap = layer_tilemap_get_id("FloorTiles");
+for (var i = 0; i < MAP_W; i++) {
+	for (var j = 0; j < MAP_H; j++) {
+		var tileMapData = tilemap_get(tileMap, i, j);
+		// [Sprite, Z]
+		var thisTile = [-1, 0];
+		thisTile[TILE.SPRITE] = tileMapData;
+		thisTile[TILE.Z] = 0;
+		global.theFloorMap[# i, j] = thisTile;
 	}
 }
 tileMap = layer_tilemap_get_id("WallTiles");
