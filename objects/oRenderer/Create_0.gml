@@ -5,6 +5,7 @@ layer_set_visible("ColliderTiles", false);
 draw_set_font(GameFont);
 global.theMap = ds_grid_create(MAP_W, MAP_H);
 global.theTopMap = ds_grid_create(MAP_W, MAP_H);
+global.theFurnitureMap = ds_grid_create(MAP_W, MAP_H);
 global.theRoofMap = ds_grid_create(MAP_W, MAP_H);
 global.drawRoof = true;
 
@@ -51,6 +52,17 @@ for (var i = 0; i < MAP_W * 4; i++) {
 		if (tileMapData == 1) {
 			mp_grid_add_cell(grid, i, j);	
 		}
+	}
+}
+tileMap = layer_tilemap_get_id("RoofTiles");
+for (var i = 0; i < MAP_W; i++) {
+	for (var j = 0; j < MAP_H; j++) {
+		var tileMapData = tilemap_get(tileMap, i, j);
+		// [Sprite, Z]
+		var thisTile = [-1, 0];
+		thisTile[TILE.SPRITE] = tileMapData;
+		thisTile[TILE.Z] = 0;
+		global.theRoofMap[# i, j] = thisTile;
 	}
 }
 

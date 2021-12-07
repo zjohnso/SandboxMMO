@@ -7,7 +7,7 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 14,
+  "bbox_left": 0,
   "bbox_right": 15,
   "bbox_top": 0,
   "bbox_bottom": 15,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"22ac0c25-35dd-40aa-9542-ac8d1f417eb7","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"22ac0c25-35dd-40aa-9542-ac8d1f417eb7","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},"LayerId":{"name":"135eda28-7710-40e3-9866-dd5be3ae9533","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sDoorExitWest","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},"resourceVersion":"1.0","name":"22ac0c25-35dd-40aa-9542-ac8d1f417eb7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"2b09e1ab-c31c-4ab2-8c14-0cfc0dfb827e","path":"sprites/s2DStairs/s2DStairs.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"2b09e1ab-c31c-4ab2-8c14-0cfc0dfb827e","path":"sprites/s2DStairs/s2DStairs.yy",},"LayerId":{"name":"327c75af-9aa5-4ebb-ad29-8058856ab1f4","path":"sprites/s2DStairs/s2DStairs.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s2DStairs","path":"sprites/s2DStairs/s2DStairs.yy",},"resourceVersion":"1.0","name":"2b09e1ab-c31c-4ab2-8c14-0cfc0dfb827e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sDoorExitWest","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},
+    "spriteId": {"name":"s2DStairs","path":"sprites/s2DStairs/s2DStairs.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7d431d14-db40-444f-a16d-4455ff49426f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22ac0c25-35dd-40aa-9542-ac8d1f417eb7","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a0d1072f-e0ab-4dd0-9ad6-da910685654f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2b09e1ab-c31c-4ab2-8c14-0cfc0dfb827e","path":"sprites/s2DStairs/s2DStairs.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sDoorExitWest","path":"sprites/sDoorExitWest/sDoorExitWest.yy",},
+    "parent": {"name":"s2DStairs","path":"sprites/s2DStairs/s2DStairs.yy",},
     "resourceVersion": "1.3",
-    "name": "sDoorExitWest",
+    "name": "s2DStairs",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"135eda28-7710-40e3-9866-dd5be3ae9533","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"327c75af-9aa5-4ebb-ad29-8058856ab1f4","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Colliders",
-    "path": "folders/Sprites/Colliders.yy",
+    "name": "2DSprite",
+    "path": "folders/Sprites/Stairs/2DSprite.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sDoorExitWest",
+  "name": "s2DStairs",
   "tags": [],
   "resourceType": "GMSprite",
 }
