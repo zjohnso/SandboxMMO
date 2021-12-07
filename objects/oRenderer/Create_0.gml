@@ -5,9 +5,11 @@ layer_set_visible("ColliderTiles", false);
 draw_set_font(GameFont);
 global.theMap = ds_grid_create(MAP_W, MAP_H);
 global.theTopMap = ds_grid_create(MAP_W, MAP_H);
-global.theFurnitureMap = ds_grid_create(MAP_W, MAP_H);
 global.theRoofMap = ds_grid_create(MAP_W, MAP_H);
 global.drawRoof = true;
+
+// toggle snow on or off
+snow = true;
 
 globalvar grid;
 grid = mp_grid_create(0,0,room_width div 4, room_height div 4, 4, 4);

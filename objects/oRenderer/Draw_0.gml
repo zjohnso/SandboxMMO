@@ -14,7 +14,10 @@ for (var i = 0; i< MAP_W; i++) {
 		tileZ = tileData[TILE.Z];
 		
 		if (tileIndex != 0) {
-			draw_sprite(sIsoGrass, tileIndex - 1, roomX, roomY - tileZ);	
+			draw_sprite(sIsoGrass, tileIndex - 1, roomX, roomY - tileZ);
+			if (tileIndex != 4) {
+				draw_sprite(sIsoSnowDecor, 0, roomX, roomY - tileZ);
+			}
 		}
 	}
 }
