@@ -16,7 +16,9 @@ for (var i = 0; i< MAP_W; i++) {
 		if (tileIndex != 0) {
 			draw_sprite(sIsoGrass, tileIndex - 1, roomX, roomY - tileZ);
 			if (tileIndex != 4) {
+				draw_set_alpha(.85);
 				draw_sprite(sIsoSnowDecor, 0, roomX, roomY - tileZ);
+				draw_set_alpha(1);
 			}
 		}
 	}
