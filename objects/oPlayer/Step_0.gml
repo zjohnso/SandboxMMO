@@ -12,3 +12,6 @@ if path_position == 1 {
 }
 
 
+
+// temp for fun REMOVE LATER
+hasSantaHat = (inventory.GetTotalQuantity(ITEM_ID.SANTA_HAT) > 0);

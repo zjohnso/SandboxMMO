@@ -140,9 +140,13 @@ for (var i = 0; i< MAP_W; i++) {
 				}
 			}
 		}
-		
+		// render the player
 		if (i == playerDrawXTile && j == playerDrawYTile) {
 			draw_sprite(sPlayer, 0, oPlayer.drawX, oPlayer.drawY);
+			// render the player's santa hat if has one TEMP REMOVE LATER
+			if (oPlayer.hasSantaHat) {
+				draw_sprite(sSantaHat, 0, oPlayer.drawX, oPlayer.drawY - oPlayer.height);	
+			}
 		}
 		
 	}

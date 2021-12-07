@@ -1,3 +1,11 @@
+enum ARMOR_SLOT {
+	HEAD,
+	CHEST,
+	HANDS,
+	LEGS,
+	FEET
+}
+
 function Item() constructor {
 	name = "";
 	value = 0;
@@ -10,4 +18,10 @@ function Item() constructor {
 function Resource() : Item() constructor {
 	stackable = true;
 	maxStack = 20;
+}
+
+function Armor() : Item() constructor {
+	stackable = false;
+	equipment = true;
+	slot = noone;
 }

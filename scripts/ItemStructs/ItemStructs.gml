@@ -32,3 +32,11 @@ function Plank() : Resource() constructor {
 	sprite = sPlank;
 	_id = ITEM_ID.PLANK;
 }
+
+function SantaHat() : Armor() constructor {
+	name = "Santa Hat";
+	value = 500;
+	sprite = sSantaHat;
+	_id = ITEM_ID.SANTA_HAT;
+	slot = ARMOR_SLOT.HEAD;
+}

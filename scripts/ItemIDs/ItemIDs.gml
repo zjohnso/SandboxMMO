@@ -3,5 +3,6 @@ enum ITEM_ID {
 	COAL,
 	FISH,
 	COOKED_FISH,
-	PLANK
+	PLANK,
+	SANTA_HAT,
 }
