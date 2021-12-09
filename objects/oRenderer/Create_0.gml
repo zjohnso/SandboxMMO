@@ -16,69 +16,54 @@ snow = true;
 globalvar grid;
 grid = mp_grid_create(0,0,room_width div 4, room_height div 4, 4, 4);
 
-var tileMap = layer_tilemap_get_id("GroundTiles");
+var groundMap = layer_tilemap_get_id("GroundTiles");
+var floorMap = layer_tilemap_get_id("FloorTiles");
+var wallMap = layer_tilemap_get_id("WallTiles");
+var roofMap = layer_tilemap_get_id("RoofTiles");
+var colliderMap = layer_tilemap_get_id("ColliderTiles");
 for (var i = 0; i < MAP_W; i++) {
 	for (var j = 0; j < MAP_H; j++) {
-		var tileMapData = tilemap_get(tileMap, i, j);
+		// set ground map data
+		var tileMapData = tilemap_get(groundMap, i, j);
 		// [Sprite, Z]
 		var thisTile = [-1, 0];
 		thisTile[TILE.SPRITE] = tileMapData;
 		thisTile[TILE.Z] = 0;
 		global.theMap[# i, j] = thisTile;
-	}
-}
-var tileMap = layer_tilemap_get_id("FloorTiles");
-for (var i = 0; i < MAP_W; i++) {
-	for (var j = 0; j < MAP_H; j++) {
-		var tileMapData = tilemap_get(tileMap, i, j);
+		
+		// set floor map data
+		tileMapData = tilemap_get(floorMap, i, j);
 		// [Sprite, Z]
-		var thisTile = [-1, 0];
+		thisTile = [-1, 0];
 		thisTile[TILE.SPRITE] = tileMapData;
 		thisTile[TILE.Z] = 0;
 		global.theFloorMap[# i, j] = thisTile;
-	}
-}
-tileMap = layer_tilemap_get_id("WallTiles");
-for (var i = 0; i < MAP_W; i++) {
-	for (var j = 0; j < MAP_H; j++) {
-		var tileMapData = tilemap_get(tileMap, i, j);
+		
+		// set wall map data
+		tileMapData = tilemap_get(wallMap, i, j);
 		// [Sprite, Z]
-		var thisTile = [-1, 0];
+		thisTile = [-1, 0];
 		thisTile[TILE.SPRITE] = tileMapData;
 		thisTile[TILE.Z] = 0;
 		global.theTopMap[# i, j] = thisTile;
-	}
-}
-tileMap = layer_tilemap_get_id("RoofTiles");
-for (var i = 0; i < MAP_W; i++) {
-	for (var j = 0; j < MAP_H; j++) {
-		var tileMapData = tilemap_get(tileMap, i, j);
+		
+		// set roof map data
+		tileMapData = tilemap_get(roofMap, i, j);
 		// [Sprite, Z]
-		var thisTile = [-1, 0];
-		thisTile[TILE.SPRITE] = tileMapData;
-		thisTile[TILE.Z] = 0;
-		global.theRoofMap[# i, j] = thisTile;
-	}
-}
-tileMap = layer_tilemap_get_id("ColliderTiles");
-for (var i = 0; i < MAP_W * 4; i++) {
-	for (var j = 0; j < MAP_H * 4; j++) {
-		var tileMapData = tilemap_get(tileMap, i, j);
-		if (tileMapData == 1) {
-			mp_grid_add_cell(grid, i, j);	
-		}
-	}
-}
-tileMap = layer_tilemap_get_id("RoofTiles");
-for (var i = 0; i < MAP_W; i++) {
-	for (var j = 0; j < MAP_H; j++) {
-		var tileMapData = tilemap_get(tileMap, i, j);
-		// [Sprite, Z]
-		var thisTile = [-1, 0];
+		thisTile = [-1, 0];
 		thisTile[TILE.SPRITE] = tileMapData;
 		thisTile[TILE.Z] = 0;
 		global.theRoofMap[# i, j] = thisTile;
 	}
 }
 
+// set collision map data
+for (var i = 0; i < MAP_W * 4; i++) {
+	for (var j = 0; j < MAP_H * 4; j++) {
+		var tileMapData = tilemap_get(colliderMap, i, j);
+		if (tileMapData == 1) {
+			mp_grid_add_cell(grid, i, j);	
+		}
+	}
+}
 		

@@ -20,6 +20,14 @@ function ToIsoY(_x, _y, _z) {
 	return ((_x + _y)/2) + _z;
 }
 
+function MobToIsoX(_x, _y) {
+	return ((_x - _y));
+}
+
+function MobToIsoY(_x, _y, _z) {
+	return ((_x + _y)/2) + _z;
+}
+
 function ToCartX(_isoX, _isoY) {
 	return (.5*_isoX + _isoY);
 }
@@ -34,4 +42,12 @@ function ScreenXToTile(_x, _y) {
 
 function ScreenYToTile(_x, _y) {
 	return floor(_y/TILE_H - _x/TILE_W);	
+}
+
+function CartToTileX(_x) {
+	return floor(_x / 16);	
+}
+
+function CartToTileY(_y) {
+	return floor(_y / 16);	
 }

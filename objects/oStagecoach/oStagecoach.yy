@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s2DHorse",
-    "path": "sprites/s2DHorse/s2DHorse.yy",
+    "name": "s2DStagecoach",
+    "path": "sprites/s2DStagecoach/s2DStagecoach.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,9 +24,8 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -35,7 +34,7 @@
     "path": "folders/Objects/Mobs.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oHorse",
+  "name": "oStagecoach",
   "tags": [],
   "resourceType": "GMObject",
 }

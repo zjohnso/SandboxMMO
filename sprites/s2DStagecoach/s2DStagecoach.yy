@@ -1,5 +1,5 @@
 {
-  "bboxMode": 1,
+  "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
   "origin": 0,
@@ -7,15 +7,15 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 15,
+  "bbox_left": 16,
+  "bbox_right": 31,
   "bbox_top": 0,
   "bbox_bottom": 15,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 16,
-  "height": 16,
+  "width": 32,
+  "height": 32,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"feabc8da-a6f7-42f9-8ba9-29f50a7b6a39","path":"sprites/s2DSnowman/s2DSnowman.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"feabc8da-a6f7-42f9-8ba9-29f50a7b6a39","path":"sprites/s2DSnowman/s2DSnowman.yy",},"LayerId":{"name":"5af13320-41e1-4fc3-aba7-784463a2e13c","path":"sprites/s2DSnowman/s2DSnowman.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s2DSnowman","path":"sprites/s2DSnowman/s2DSnowman.yy",},"resourceVersion":"1.0","name":"feabc8da-a6f7-42f9-8ba9-29f50a7b6a39","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","path":"sprites/s2DStagecoach/s2DStagecoach.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","path":"sprites/s2DStagecoach/s2DStagecoach.yy",},"LayerId":{"name":"d17c21d7-21fc-4977-859a-a11559a76f2c","path":"sprites/s2DStagecoach/s2DStagecoach.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"s2DStagecoach","path":"sprites/s2DStagecoach/s2DStagecoach.yy",},"resourceVersion":"1.0","name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"s2DSnowman","path":"sprites/s2DSnowman/s2DSnowman.yy",},
+    "spriteId": {"name":"s2DStagecoach","path":"sprites/s2DStagecoach/s2DStagecoach.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7e10d81c-1755-4681-a0ca-dd47025c5278","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"feabc8da-a6f7-42f9-8ba9-29f50a7b6a39","path":"sprites/s2DSnowman/s2DSnowman.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1870e858-1df5-49c9-b3ba-f93b2bc669aa","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","path":"sprites/s2DStagecoach/s2DStagecoach.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s2DSnowman","path":"sprites/s2DSnowman/s2DSnowman.yy",},
+    "parent": {"name":"s2DStagecoach","path":"sprites/s2DStagecoach/s2DStagecoach.yy",},
     "resourceVersion": "1.3",
-    "name": "s2DSnowman",
+    "name": "s2DStagecoach",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5af13320-41e1-4fc3-aba7-784463a2e13c","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d17c21d7-21fc-4977-859a-a11559a76f2c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Mobs/2DSprite.yy",
   },
   "resourceVersion": "1.0",
-  "name": "s2DSnowman",
+  "name": "s2DStagecoach",
   "tags": [],
   "resourceType": "GMSprite",
 }
