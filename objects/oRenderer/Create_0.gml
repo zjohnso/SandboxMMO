@@ -10,6 +10,10 @@ global.theTopMap = ds_grid_create(MAP_W, MAP_H);
 global.theRoofMap = ds_grid_create(MAP_W, MAP_H);
 global.drawRoof = true;
 
+// create boolean map to keep track of visited cells for instance layer and set init to false
+visited = ds_grid_create(MAP_W, MAP_H);
+ds_grid_set_region(visited, 0, 0, MAP_W, MAP_H, false);
+
 // toggle snow on or off
 snow = true;
 
