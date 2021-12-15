@@ -128,8 +128,8 @@ function DrawInstanceLayer() {
 
 // Draws the background walls in the specified area of the tilemap, ignoring the top left most wall. marks the cells as drawn
 function DrawBGWalls(xTop, yTop, xBot, yBot) {
-	for (var i = xTop; i <= xBot; i++) {
-		for (var j = yTop; j <= yBot; j++) {
+	for (var i = xTop; i < xBot; i++) {
+		for (var j = yTop; j < yBot; j++) {
 			if (i == xTop && j == yTop) {
 				continue;	
 			} else {
