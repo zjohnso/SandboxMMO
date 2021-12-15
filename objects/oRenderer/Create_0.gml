@@ -52,7 +52,7 @@ for (var i = 0; i < MAP_W; i++) {
 		// [Sprite, Z]
 		thisTile = [-1, 0];
 		thisTile[TILE.SPRITE] = tileMapData;
-		thisTile[TILE.Z] = 0;
+		thisTile[TILE.Z] = -6;
 		global.theRoofMap[# i, j] = thisTile;
 	}
 }
