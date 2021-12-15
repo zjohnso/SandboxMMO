@@ -3,4 +3,6 @@
 drawX = ToIsoX(x, y);
 drawY = ToIsoY(x, y, 0);
 
+drawn = false;
+
 playerInteracting = false;

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "s2DStairs",
-    "path": "sprites/s2DStairs/s2DStairs.yy",
+    "name": "s2DBigTable",
+    "path": "sprites/s2DBigTable/s2DBigTable.yy",
   },
   "solid": false,
   "visible": true,
@@ -24,18 +24,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stairs",
-    "path": "folders/Objects/Stairs.yy",
+    "name": "Furniture",
+    "path": "folders/Objects/Furniture.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oStairs",
+  "name": "oBigTable",
   "tags": [],
   "resourceType": "GMObject",
 }
