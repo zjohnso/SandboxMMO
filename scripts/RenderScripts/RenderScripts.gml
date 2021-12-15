@@ -84,7 +84,15 @@ function DrawWall(tileX, tileY, tileIndex, tileDrawX, tileDrawY, tileZ) {
 			a = .25;	
 		}
 	}
-	draw_sprite_ext(sIsoWall, tileIndex - 1, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);	
+	var wall = global.wallMapping[tileIndex - 1];
+	var wallToDraw = wall.drawOrder[DRAW_ORDER.BACK_G];
+	if (wall.isFancyWall) {
+		draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
+		wallToDraw = wall.drawOrder[DRAW_ORDER.FORE_G];
+		draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
+	} else {
+		draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);	
+	}
 }
 
 function DrawInstance(inst) {

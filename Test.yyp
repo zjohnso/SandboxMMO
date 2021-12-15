@@ -17,6 +17,7 @@
     {"id":{"name":"oColliderLevel2","path":"objects/oColliderLevel2/oColliderLevel2.yy",},"order":9,},
     {"id":{"name":"s2DFishingNode","path":"sprites/s2DFishingNode/s2DFishingNode.yy",},"order":2,},
     {"id":{"name":"sIsoGrass","path":"sprites/sIsoGrass/sIsoGrass.yy",},"order":3,},
+    {"id":{"name":"TileMappings","path":"scripts/TileMappings/TileMappings.yy",},"order":4,},
     {"id":{"name":"s2DSnowman","path":"sprites/s2DSnowman/s2DSnowman.yy",},"order":0,},
     {"id":{"name":"sIsoRoof","path":"sprites/sIsoRoof/sIsoRoof.yy",},"order":0,},
     {"id":{"name":"sIsoInteriorFloors","path":"sprites/sIsoInteriorFloors/sIsoInteriorFloors.yy",},"order":4,},
@@ -177,7 +178,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.7.603",
+    "IDEVersion": "2.3.6.595",
   },
   "resourceVersion": "1.4",
   "name": "Test",
