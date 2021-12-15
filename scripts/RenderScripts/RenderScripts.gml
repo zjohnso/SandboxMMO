@@ -85,13 +85,20 @@ function DrawWall(tileX, tileY, tileIndex, tileDrawX, tileDrawY, tileZ) {
 		}
 	}
 	var wall = global.wallMapping[tileIndex - 1];
-	var wallToDraw = wall.drawOrder[DRAW_ORDER.BACK_G];
 	if (wall.isFancyWall) {
+		// if the wall being drawn is a corner and has not been visited yet, draw the back and foreground walls
+		if (!oRenderer.visited[# tileX, tileY]) {
+			var wallToDraw = wall.drawOrder[DRAW_ORDER.BACK_G];
+			draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
+			wallToDraw = wall.drawOrder[DRAW_ORDER.FORE_G];
+			draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
+		} else {  // if it is a corner and HAS been visited, draw the foreground wall
+			var wallToDraw = wall.drawOrder[DRAW_ORDER.FORE_G];
+			draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
+		}
+	} else { // if the wall isn't a corner, just draw the wall
+		var wallToDraw = wall.drawOrder[DRAW_ORDER.BACK_G];
 		draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
-		wallToDraw = wall.drawOrder[DRAW_ORDER.FORE_G];
-		draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
-	} else {
-		draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);	
 	}
 }
 
@@ -128,35 +135,45 @@ function DrawInstanceLayer() {
 
 // Draws the background walls in the specified area of the tilemap, ignoring the top left most wall. marks the cells as drawn
 function DrawBGWalls(xTop, yTop, xBot, yBot) {
-	for (var i = xTop; i < xBot; i++) {
-		for (var j = yTop; j < yBot; j++) {
-			if (i == xTop && j == yTop) {
-				continue;	
-			} else {
-				// draw the walls
-				var tileData = global.theTopMap[# i, j];
-				var tileDrawX = TileToScreenX(i, j);
-				var tileDrawY = TileToScreenY(i, j);
-				var tileIndex = tileData[TILE.SPRITE];
-				var tileZ = tileData[TILE.Z];
+	for (var i = xTop; i <= xBot; i++) {
+		for (var j = yTop; j <= yBot; j++) {
+			// draw the walls
+			var tileData = global.theTopMap[# i, j];
+			var tileDrawX = TileToScreenX(i, j);
+			var tileDrawY = TileToScreenY(i, j);
+			var tileIndex = tileData[TILE.SPRITE];
+			var tileZ = tileData[TILE.Z];
 				
-				var isWallHere = (tileIndex != 0);
-				if (isWallHere) {
-					// get the collider grid index at the top left of the tile
-					var wallColliderXTL = i * 4;
-					var wallColliderYTL = j * 4;
-					// get the collider grid index at the bottom right
-					var wallColliderXBR = wallColliderXTL + 3;
-					var wallColliderYBR = wallColliderYTL + 3;
-					// is this collision cell marked? if so, it's a foreground wall
-					var isForegroundWall = (mp_grid_get_cell(grid, wallColliderXBR, wallColliderYBR) == -1);
+			var isWallHere = (tileIndex != 0);
+			if (isWallHere) {
+				// get the collider grid index at the top left of the tile
+				var wallColliderXTL = i * 4;
+				var wallColliderYTL = j * 4;
+				// get the collider grid index at the bottom right
+				var wallColliderXBR = wallColliderXTL + 3;
+				var wallColliderYBR = wallColliderYTL + 3;
+				// is this collision cell marked? if so, it's a foreground wall
+				var isForegroundWall = (mp_grid_get_cell(grid, wallColliderXBR, wallColliderYBR) == -1);
+				var isBackgroundWall = (mp_grid_get_cell(grid, wallColliderXTL, wallColliderYTL) == -1);
 					
-					// draw the wall if it's not foreground
-					if (!isForegroundWall) {
-						DrawWall(i, j, tileIndex, tileDrawX, tileDrawY, tileZ);
-						// mark cell as visited
-						oRenderer.visited[# i, j] = true;
+				// if this wall is a corner wall, draw the background wall and mark to visit it once again
+				if (isBackgroundWall && isForegroundWall) {
+					//show_debug_message("corner wall detected on same tile as object");
+					oRenderer.visitTwice[# i, j] = true;
+				}
+				// draw the wall if it's not foreground
+				if (isBackgroundWall) {
+					var a = 1;
+					if (i >= oRenderer.playerDrawXTile && i < oRenderer.playerDrawXTile + 2) {
+						if (j >= oRenderer.playerDrawYTile && j < oRenderer.playerDrawYTile + 2) {
+							a = .25;	
+						}
 					}
+					var wall = global.wallMapping[tileIndex - 1];
+					var wallToDraw = wall.drawOrder[DRAW_ORDER.BACK_G];
+					draw_sprite_ext(wallToDraw.s, wallToDraw.f, tileDrawX, tileDrawY + tileZ, 1, 1, 0, c_white, a);
+					// mark cell as visited
+					oRenderer.visited[# i, j] = true;
 				}
 			}
 		}
@@ -168,7 +185,10 @@ function DrawRowToPoint(rowNumber, stoppingPoint) {
 	// Loop the row and draw each cell
 	for (var i = 0; i < stoppingPoint; i++) {
 		// if this tile has been visited, continue
-		if (oRenderer.visited[# rowNumber, i] == true) {
+		if (oRenderer.visited[# rowNumber, i] && !oRenderer.visitTwice[# rowNumber, i]) {
+			continue;	
+		}
+		if (oRenderer.visitTwice[# rowNumber, i] && oRenderer.visitedTwice[# rowNumber, i]) {
 			continue;	
 		}
 		
@@ -177,6 +197,12 @@ function DrawRowToPoint(rowNumber, stoppingPoint) {
 		var tileDrawY = TileToScreenY(rowNumber, i);
 		var tileIndex = tileData[TILE.SPRITE];
 		var tileZ = tileData[TILE.Z];
+		
+		// if we are visiting a second time, it's just to draw the wall and continue
+		if (oRenderer.visited[# rowNumber, i]) {
+			DrawWall(rowNumber, i, tileIndex, tileDrawX, tileDrawY, tileZ);
+			continue;
+		}
 		
 		// draw the pointer if necessary
 		if (oPlayer.isMoving) {
@@ -187,12 +213,10 @@ function DrawRowToPoint(rowNumber, stoppingPoint) {
 		
 		// set up flags
 		var isWallHere = (tileIndex != 0);
-		var isInstanceHere = false;
 		// test for an instance
-		var inst;
-		inst = instance_position(rowNumber * 16 + 8, i * 16 + 8, poObjects);
+		var inst = instance_position(rowNumber * 16 + 8, i * 16 + 8, poObjects);
 		// set instance flag
-		isInstanceHere = (inst != noone && inst.sprite != noone);
+		var isInstanceHere = (inst != noone && inst.sprite != noone);
 		
 		// if an instance is here, how many rows does it occupy? also, don't do this if the instance is already drawn
 		if (isInstanceHere) {
@@ -253,6 +277,10 @@ function DrawRowToPoint(rowNumber, stoppingPoint) {
 		// render the player if player is on the current tile
 		if (rowNumber == oRenderer.playerDrawXTile && i == oRenderer.playerDrawYTile) {
 			DrawPlayer();
+		}
+		// if the cell is visited, mark as visited twice
+		if (oRenderer.visited[# rowNumber, i]) {
+			oRenderer.visitedTwice[# rowNumber, i] = true;	
 		}
 		// mark the cell as visited
 		oRenderer.visited[# rowNumber, i] = true;
