@@ -15,12 +15,8 @@ visited = ds_grid_create(MAP_W, MAP_H);
 ds_grid_set_region(visited, 0, 0, MAP_W, MAP_H, false);
 // create map similar to visited, denoting if a tile needs to be visited twice to draw the foreground wall
 // this is really just to draw corners correctly
-visitTwice = ds_grid_create(MAP_W, MAP_H);
-ds_grid_set_region(visitTwice, 0, 0, MAP_W, MAP_H, false);
-// create map to keep track of second visit
-// we need to optimize this later
-visitedTwice = ds_grid_create(MAP_W, MAP_H);
-ds_grid_set_region(visitedTwice, 0, 0, MAP_W, MAP_H, false);
+partial = ds_grid_create(MAP_W, MAP_H);
+ds_grid_set_region(partial, 0, 0, MAP_W, MAP_H, false);
 
 
 // toggle snow on or off
