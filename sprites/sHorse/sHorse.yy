@@ -2,7 +2,7 @@
   "bboxMode": 1,
   "collisionKind": 1,
   "type": 0,
-  "origin": 9,
+  "origin": 7,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
@@ -26,7 +26,6 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","path":"sprites/sHorse/sHorse.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","path":"sprites/sHorse/sHorse.yy",},"LayerId":{"name":"d17c21d7-21fc-4977-859a-a11559a76f2c","path":"sprites/sHorse/sHorse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","path":"sprites/sHorse/sHorse.yy",},"LayerId":{"name":"2113e333-c7dd-45d1-b23b-4895326c0fe1","path":"sprites/sHorse/sHorse.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sHorse","path":"sprites/sHorse/sHorse.yy",},"resourceVersion":"1.0","name":"0333c76b-9d17-48ac-9ef7-bb73d6dfe613","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -56,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 16,
-    "yorigin": 24,
+    "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sHorse","path":"sprites/sHorse/sHorse.yy",},

@@ -21,6 +21,6 @@ horseSpeed = 0.1;
 // direction -1 is left and 1 is right
 _direction = 0;
 
-event = irandom_range(0, 5) * room_speed;
+event = irandom_range(0, 5) * room_speed * 10;
 
 tamed = false;

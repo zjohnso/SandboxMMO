@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if event >= (room_speed * 5) / horseSpeed {
+if event >= (room_speed * 5) * 10 {
 	HandleHorseMovement();
 	event = 0;
 }
